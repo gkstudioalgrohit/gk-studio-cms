@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Minimal manual reset, scoped to the admin shell only (Tailwind preflight is
+   disabled globally so it never touches the public site's stylesheet). */
+.gk-admin {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+  color: #15151a;
+  background: #fafaf9;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.gk-admin *, .gk-admin *::before, .gk-admin *::after { box-sizing: inherit; }
+.gk-admin h1, .gk-admin h2, .gk-admin h3, .gk-admin p, .gk-admin ul, .gk-admin fieldset { margin: 0; padding: 0; }
+.gk-admin ul { list-style: none; }
+.gk-admin fieldset { border: 0; }
+.gk-admin button { font: inherit; color: inherit; }
+.gk-admin input, .gk-admin textarea, .gk-admin select { font: inherit; color: inherit; }
+.gk-admin img, .gk-admin video { max-width: 100%; display: block; }
+.gk-admin a { color: inherit; text-decoration: none; }
+
+.gk-field {
+  width: 100%; border: 1px solid #e6e4df; border-radius: 8px; padding: 9px 12px;
+  background: #fff; font-size: 14px; transition: border-color .15s;
+}
+.gk-field:focus { outline: none; border-color: #b08d57; }
+.gk-label { font-size: 12.5px; font-weight: 600; color: #57544c; display: block; margin-bottom: 6px; }
+.gk-card { background: #fff; border: 1px solid #e6e4df; border-radius: 12px; }
+.gk-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; border-radius: 8px; font-size: 13.5px; font-weight: 600; padding: 9px 16px; transition: opacity .15s, background .15s; cursor: pointer; border: 1px solid transparent; }
+.gk-btn:disabled { opacity: .5; cursor: not-allowed; }
+.gk-btn-primary { background: #15151a; color: #fff; }
+.gk-btn-primary:hover:not(:disabled) { opacity: .85; }
+.gk-btn-outline { background: #fff; border-color: #e6e4df; }
+.gk-btn-outline:hover:not(:disabled) { background: #f5f4f1; }
+.gk-btn-danger { background: #fff; color: #b3311f; border-color: #f0d3ce; }
+.gk-btn-danger:hover:not(:disabled) { background: #fdf3f2; }

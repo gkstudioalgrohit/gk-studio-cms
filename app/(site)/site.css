@@ -1,3 +1,7 @@
+/* Fonts: previously loaded via <link> tags in index.html's <head>; moved here
+   verbatim since Next.js pages no longer have a static <head> to put them in. */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500&display=swap");
+
 /* ==========================================================
    GK STUDIO — Design tokens
    ========================================================== */
